@@ -1,0 +1,270 @@
+@import "tailwindcss";
+@import "tailwindcss/utilities";
+
+
+/* ========================
+   THEME (variables y animaciones)
+   ======================== */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes glowPulse {
+  from {
+    text-shadow: 0 0 5px rgba(20, 184, 166, 0.6),
+      0 0 15px rgba(20, 184, 166, 0.5),
+      0 0 25px rgba(20, 184, 166, 0.3);
+  }
+
+  to {
+    text-shadow: 0 0 15px rgba(20, 184, 166, 1),
+      0 0 30px rgba(20, 184, 166, 0.8),
+      0 0 45px rgba(20, 184, 166, 0.6);
+  }
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* ========================
+   NAVBAR underline
+   ======================== */
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #14b8a6;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+/* ========================
+   HERO gradient background
+   ======================== */
+.bg-hero {
+  background: linear-gradient(270deg, #0c796c, #0777aa, #4a1180);
+  background-size: 600% 600%;
+  animation: gradientBG 15s ease infinite;
+}
+
+
+/* ========================
+   PROGRESS bar & text
+   ======================== */
+.progress-bar {
+  transition: width 2s ease-in-out;
+}
+
+.progress-text {
+  opacity: 0;
+  transition: opacity 1s ease-in-out 1.5s, transform 1s ease-in-out 1.5s;
+  transform: translateX(10px);
+}
+
+
+/* ========================
+   GLOW text
+   ======================== */
+.glow-text {
+  text-shadow: 0 0 10px rgba(20, 184, 166, 0.8),
+    0 0 20px rgba(20, 184, 166, 0.6),
+    0 0 30px rgba(20, 184, 166, 0.4);
+  animation: glowPulse 2.5s infinite alternate;
+}
+
+
+/* ========================
+   BOTÓN CV (redondo con tooltip)
+   ======================== */
+.Btn {
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 0.3s;
+}
+
+.svgIcon {
+  fill: #2196f3;
+}
+
+.icon2 {
+  width: 18px;
+  height: 5px;
+  border-bottom: 2px solid #2196f3;
+  border-left: 2px solid #2196f3;
+  border-right: 2px solid #2196f3;
+}
+
+.tooltip {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  background-color: rgb(12, 12, 12);
+  color: white;
+  padding: 10px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.2s;
+  pointer-events: none;
+  letter-spacing: 0.5px;
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: rgb(12, 12, 12);
+  background-size: 1000%;
+  background-position: center;
+  transform: rotate(45deg);
+  bottom: -5%;
+  top: -5px;
+  left: 50%;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .tooltip {
+  opacity: 1;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover {
+  background-color: #01579b;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .icon2 {
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.Btn:hover .svgIcon {
+  fill: white;
+  animation: slide-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+
+/* ========================
+   SWITCH (dark mode toggle)
+   ======================== */
+.switch {
+  display: block;
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon, 1.4em);
+  width: var(--size-of-icon, 1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset, 0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #303136;
+}
+
+input:checked+.slider:before {
+  left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+  background: #303136;
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}

@@ -1,196 +1,47 @@
-<!DOCTYPE html>
-<html lang="es" class="">
+<!doctype html>
+<html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Edward Eliecer Silva Mejía</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="description" content="Portafolio de Edward Silva Mejía - desarrollador backend, IA y robótica." />
+  <title>Portafolio | Edward Silva Mejía</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- tailwid config -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Alternancia modo claro/oscuro -->
+
   <script>
     tailwind.config = {
       darkMode: 'class',
-    };
-  </script>
-  <style>
-    /* Transición suave entre modos */
-    html {
-      transition: background-color 0.5s, color 0.5s;
+      theme: {
+        fontFamily: { sans: ['Inter', 'sans-serif'] },
+        extend: {
+          colors: { primary: '#14b8a6', darkbg: '#0f172a' },
+          animation: {
+            fadeIn: "fadeIn 1s ease-in-out",
+            slideUp: "slideUp 1s ease-out",
+          },
+          keyframes: {
+            fadeIn: { "0%": { opacity: 0 }, "100%": { opacity: 1 } },
+            slideUp: { "0%": { transform: "translateY(30px)", opacity: 0 }, "100%": { transform: "translateY(0)", opacity: 1 } }
+          }
+        }
+      }
     }
-  </style>
+  </script>
+
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans leading-relaxed">
-
-
-  <header class="p-4 flex justify-between items-center shadow dark:shadow-white/10">
-    <h1 class="text-2xl font-bold">Edward Eliecer Silva Mejía</h1>
-    <!-- modo oscuro -->
-    <button onclick="toggleDarkMode()"
-      class="bg-gray-300 dark:bg-gray-700 text-black dark:text-white p-1.5 rounded-full shadow hover:scale-105 transition-all text-sm">
-      🌙 / ☀️
-    </button>
-    <!-- descargar hoja de vida -->
-    <a href="cv-edward.pdf"
-      class="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-full text-sm transition">Descargar CV</a>
-  </header>
-
-  <main class="p-6 max-w-4xl mx-auto">
-
-    <section class="mb-10">
-      <h2 class="text-xl font-semibold mb-2">Sobre mí</h2>
-      <p>Soy desarrollador de software con 5 años de experiencia en tecnologías de la información (TI), especializado en
-        el desarrollo backend y con un enfoque reciente en inteligencia artificial y robótica. También cuento con más de
-        10 años de experiencia en soporte técnico.</p>
-      <p>Mi interés por la innovación en IA, videojuegos y robótica impulsa mi enfoque hacia el desarrollo de soluciones
-        avanzadas que optimicen procesos y mejoren la experiencia del usuario.</p>
-    </section>
-
-    <section class="mb-10">
-      <h2 class="text-xl font-semibold mb-4">🧠 Habilidades</h2>
-      <div class="flex flex-wrap gap-4">
-        <!-- Habilidad -->
-        <div class="bg-gray-100 dark:bg-gray-800 rounded-full px-4 py-2 text-sm w-fit shadow">
-          <span>Java</span>
-          <div class="h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full mt-1 w-full">
-            <div class="bg-teal-400 h-1.5 rounded-full w-70%]"></div>
-          </div>
-        </div>
-        <div class="bg-gray-100 dark:bg-gray-800 rounded-full px-4 py-2 text-sm w-fit shadow">
-          <span>C#</span>
-          <div class="h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full mt-1 w-full">
-            <div class="bg-teal-400 h-1.5 rounded-full w-[80%]"></div>
-          </div>
-        </div>
-        <div class="bg-gray-100 dark:bg-gray-800 rounded-full px-4 py-2 text-sm w-fit shadow">
-          <span>Python</span>
-          <div class="h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full mt-1 w-full">
-            <div class="bg-teal-400 h-1.5 rounded-full w-50%]"></div>
-          </div>
-        </div>
-        <div class="bg-gray-100 dark:bg-gray-800 rounded-full px-4 py-2 text-sm w-fit shadow">
-          <span>AWS</span>
-          <div class="h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full mt-1 w-full">
-            <div class="bg-teal-400 h-1.5 rounded-full w-[40%]"></div>
-          </div>
-        </div>
-
-        <div class="bg-gray-100 dark:bg-gray-800 rounded-full px-4 py-2 text-sm w-fit shadow">
-          <span>Microservicio</span>
-          <div class="h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full mt-1 w-full">
-            <div class="bg-teal-400 h-1.5 rounded-full w-[85%]"></div>
-          </div>
-        </div>
-        <div class="bg-gray-100 dark:bg-gray-800 rounded-full px-4 py-2 text-sm w-fit shadow">
-          <span>APIs REST</span>
-          <div class="h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full mt-1 w-full">
-            <div class="bg-teal-400 h-1.5 rounded-full w-[85%]"></div>
-          </div>
-        </div>
-        <div class="bg-gray-100 dark:bg-gray-800 rounded-full px-4 py-2 text-sm w-fit shadow">
-          <span>RV</span>
-          <div class="h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full mt-1 w-full">
-            <div class="bg-teal-400 h-1.5 rounded-full w-[60%]"></div>
-          </div>
-        </div>
-        <div class="bg-gray-100 dark:bg-gray-800 rounded-full px-4 py-2 text-sm w-fit shadow">
-          <span>.Net</span>
-          <div class="h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full mt-1 w-full">
-            <div class="bg-teal-400 h-1.5 rounded-full w-[85%]"></div>
-          </div>
-        </div>
-        <div class="bg-gray-100 dark:bg-gray-800 rounded-full px-4 py-2 text-sm w-fit shadow">
-          <span>Laravel</span>
-          <div class="h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full mt-1 w-full">
-            <div class="bg-teal-400 h-1.5 rounded-full w-[70%]"></div>
-          </div>
-        </div>
-        <div class="bg-gray-100 dark:bg-gray-800 rounded-full px-4 py-2 text-sm w-fit shadow">
-          <span>SQL Server</span>
-          <div class="h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full mt-1 w-full">
-            <div class="bg-teal-400 h-1.5 rounded-full w-[70%]"></div>
-          </div>
-        </div>
-        <div class="bg-gray-100 dark:bg-gray-800 rounded-full px-4 py-2 text-sm w-fit shadow">
-          <span>Git</span>
-          <div class="h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full mt-1 w-full">
-            <div class="bg-teal-400 h-1.5 rounded-full w-[70%]"></div>
-          </div>
-        </div>
-        <div class="bg-gray-100 dark:bg-gray-800 rounded-full px-4 py-2 text-sm w-fit shadow">
-          <span>Azure</span>
-          <div class="h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full mt-1 w-full">
-            <div class="bg-teal-400 h-1.5 rounded-full w-[48%]"></div>
-          </div>
-        </div>
-        <div class="bg-gray-100 dark:bg-gray-800 rounded-full px-4 py-2 text-sm w-fit shadow">
-          <span>Unity</span>
-          <div class="h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full mt-1 w-full">
-            <div class="bg-teal-400 h-1.5 rounded-full w-[60%]"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mb-10">
-      <h2 class="text-xl font-semibold mb-2">🪐 Fuera del código</h2>
-      <div class="mb-6">
-        <p>Cuando no estoy programando o explorando nuevas tecnologías como la inteligencia artificial y la robótica, me
-          gusta escuchar música y aprender nuevos idiomas como japonés y mandarín. También disfruto jugar videojuegos y
-          leer sobre astronomía, lo cual me permite unir la creatividad con la ingeniería.</p>
-        <p>Me apasiona seguir aprendiendo, ya sea resolviendo retos técnicos o entendiendo otras culturas a través de
-          los idiomas y la música.</p>
-      </div>
-    </section>
-
-    <section class="mb-10">
-      <h2 class="text-xl font-semibold mb-2">📓 Publicaciones</h2>
-
-      <h2 class="text-xl font-semibold mb-2">Último artículo del blog</h2>
-      <a href="blog/index.html" class="text-teal-500 hover:underline" style="cursor:wait">¿Cuáles son las perspectivas
-        futuras a distintos
-        niveles: tecnológico, social, ético o filosófico de la Inteligencia Artificial?</a>
-    </section>
-
-    <section class="mb-10">
-      <div class="mb-4">
-        <h2 class="text-xl font-semibold mb-2">🔗 Sigueme</h2>
-      </div>
-      <div class="flex gap-4">
-        <span>
-          <a href="https://www.linkedin.com/in/eesilvamejia/" class="text-teal-500 hover:underline" style="cursor:wait">
-            <i class="fab fa-linkedin"></i>
-            Linkedin
-          </a>
-        </span>
-        <span>
-          <a href="https://github.com/edwsilme" class="text-teal-500 hover:underline" style="cursor:wait">
-            <i class="fab fa-github"></i>
-            GitHub
-          </a>
-        </span>
-        <span>
-          <a href="https://www.youtube.com/@eddwsilmeingenieria7227" class="text-teal-500 hover:underline"
-            style="cursor:wait">
-            <i class="fa-brands fa-square-youtube"></i>
-            YouTube
-          </a>
-        </span>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="text-center p-4 text-sm text-gray-500 dark:text-gray-400">
-    © 2025 Edward Silva Mejía
-  </footer>
+<body class="bg-white dark:bg-darkbg text-gray-800 dark:text-gray-100 font-sans leading-relaxed">
+  <div id="root"></div>
+  <!-- Section Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
-
-<script>
-  function toggleDarkMode() {
-    document.documentElement.classList.toggle('dark');
-  }
-</script>
 
 </html>
