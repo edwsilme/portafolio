@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { FaLinkedin, FaGithub, FaYoutube, FaInstagram } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
-import fotoPerfil from '../assets/image/Perfil_1.png';
+import fotoPerfil from '../assets/image/Perfil_1.jpg';
 
 export default function Hero() {
     const [i, setI] = useState(0)
@@ -54,7 +54,11 @@ export default function Hero() {
 
     return (
         <section className="h-screen flex flex-col items-center justify-center text-center px-6 bg-hero text-white">
-            <img src={fotoPerfil} alt="perfil" className="w-40 h-40 rounded-full shadow-lg border-4 border-primary mb-6" />
+            <img
+                src={fotoPerfil}
+                alt="perfil"
+                className="w-40 h-40 rounded-full shadow-lg border-4 border-primary mb-6 object-cover object-top"
+            />
             <h2 className="text-4xl md:text-5xl font-extrabold mb-3">
                 {t('hero_hello')} <span className="bg-white/20 px-2 py-1 rounded-md text-primary">Edward</span>
             </h2>

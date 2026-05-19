@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaLinkedin, FaGithub, FaYoutube } from 'react-icons/fa'
+import { FaLinkedin, FaGithub, FaYoutube, FaDownload } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
 import useTheme from '../hooks/useTheme'
 import LanguageSelector from './LanguageSelector'
@@ -30,7 +30,16 @@ export default function Header() {
                     {/* El selector de idioma */}
                     <LanguageSelector />
 
-                    <a href="/cv-edward.pdf" className="btn-cv" title="Descargar CV">CV</a>
+                    {/* Enlace de descarga HV */}
+                    <a
+                        href="cv-edward.pdf"
+                        download="CV_Edward_Silva.pdf"
+                        className="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg font-medium hover:bg-primary/90 transition-all shadow-sm hover:shadow-md dark:bg-primary dark:text-darkbg"
+                        title="Descargar CV"
+                    >
+                        <FaDownload className="text-sm" />
+
+                    </a>
 
                     <button
                         aria-label="Cambiar tema"
