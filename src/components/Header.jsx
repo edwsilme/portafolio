@@ -32,7 +32,7 @@ export default function Header() {
 
                     {/* Enlace de descarga HV */}
                     <a
-                        href="cv-edward.pdf"
+                        href={`${import.meta.env.BASE_URL}cv-edward.pdf`}
                         download="CV_Edward_Silva.pdf"
                         className="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg font-medium hover:bg-primary/90 transition-all shadow-sm hover:shadow-md dark:bg-primary dark:text-darkbg"
                         title="Descargar CV"
