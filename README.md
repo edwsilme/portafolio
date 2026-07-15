@@ -1,58 +1,40 @@
 # 🌐 Portafolio Personal - Edward Eliecer Silva Mejía
 
-![Portfolio Preview](src/assets/image/Perfil_1.png)
+![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-121013?style=for-the-badge&logo=github)
 
-Portafolio web personal desarrollado para presentar mi perfil profesional como Software Developer, mis habilidades técnicas, experiencia, proyectos y formas de contacto.
+[🇨🇴 Español](README.md) | [🇺🇸 English](README_EN.md)
 
-El proyecto cuenta con soporte multiidioma (Español/Inglés), modo oscuro y diseño responsive.
 
-🔗 Demo:
-https://edwsilme.github.io/portafolio/
+Aplicación web modular construida con React y Vite, diseñada para presentar mi trayectoria profesional, proyectos y habilidades técnicas. Este proyecto sirve como demostración práctica de buenas prácticas en el desarrollo frontend, modularidad y optimización de rendimiento.
 
----
 
-## 🚀 Características
+La aplicación cuenta con:
 
-- Diseño responsive para dispositivos móviles y escritorio.
-- Soporte de idiomas:
-  - Español 🇨🇴
-  - Inglés 🇺s
-- Cambio de tema claro/oscuro.
-- Descarga de hoja de vida según idioma seleccionado.
-- Animaciones y transiciones.
-- Sección de proyectos.
-- Sección de habilidades técnicas.
-- Información profesional y experiencia laboral.
-- Formulario de contacto.
+- 🌎 Soporte multiidioma (Español/Inglés)
+- 🌙 Modo oscuro
+- 📱 Diseño responsive
+
+
+🔗 **Demo:** [edwsilme.github.io/portafolio/](https://edwsilme.github.io/portafolio/)
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## 🚀 Características Clave
 
-### Frontend
+* **Internacionalización (i18n):** Soporte completo para multiidioma (Español/Inglés) con traducción dinámica de contenidos y descarga de CV adaptada al idioma seleccionado.
+* **UI/UX Adaptativa:** Interfaz responsiva móvil/escritorio con soporte nativo para Modo Oscuro (Dark/Light mode).
+* **Rendimiento y Animaciones:** Transiciones fluidas implementadas con Framer Motion y AOS sin comprometer los tiempos de carga.
 
-- React 18
-- Vite
-- JavaScript (ES6+)
-- Tailwind CSS
-- CSS3
-- HTML5
+---
 
-### Librerías
+## ⚙️ Stack Tecnológico
 
-- React Router
-- React Icons
-- Framer Motion
-- AOS
-- i18next
-- react-i18next
-
-### Herramientas
-
-- Git
-- GitHub
-- GitHub Pages
-- Visual Studio Code
+* **Frontend:** React 18, Vite, JavaScript (ES6+), Tailwind CSS.
+* **Librerías Clave:** React Router, Framer Motion, AOS, i18next (react-i18next).
+* **Despliegue & Herramientas:** Git, GitHub Actions/Pages.
 
 ---
 
@@ -60,27 +42,11 @@ https://edwsilme.github.io/portafolio/
 
 ```text
 |- src/
-	|- assets/
-		|- image/
-	|- components/
-        |- Header.jsx
-        |- Hero.jsx
-        |- About.jsx
-        |- Skills.jsx
-        |- Projects.jsx
-        |- Contact.jsx
-	|- config/
-        |- cvConfig.js
-	|- data/
-		|- projects.js
-	|- hooks/
-		|- useTheme.js
-	|- i18n/
-		|- index.js
-	|- App.jsx
-	|- main.jsx
+	|- components/    # Componentes de UI modulares y reutilizables
+	|- config/        # Archivos de configuración de datos y CV
+	|- hooks/         # Custom hooks (e.g., gestión de tema claro/oscuro)
+	|- i18n/          # Configuración y diccionarios de idiomas
 ```
-
 ---
 
 ## ⚙️ Instalación y ejecución
@@ -125,16 +91,10 @@ https://edwsilme.github.io/portafolio/
 
 Edward Silva Mejía
 
-Software Developer especializado en desarrollo Backend con tecnologías .NET y C#.
+Software Developer enfocado en desarrollo Backend (.NET / C#) con bases sólidas en frontend moderno.
 
-Intereses:
+* Áreas de interés: Arquitectura limpia, Inteligencia Artificial, Robótica y Ciencias.
 
-Desarrollo de software.
-Arquitectura limpia.
-Inteligencia Artificial.
-Robótica.
-Videojuegos.
-Ciencia y tecnología.
 
 ---
 
