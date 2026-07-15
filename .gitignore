@@ -10,7 +10,7 @@ lerna-debug.log*
 # Dependencias
 node_modules
 
-# Build
+# Compilación
 dist
 dist-ssr
 
@@ -29,3 +29,11 @@ dist-ssr
 
 # Cache de Vite
 .vite/
+
+# Variables de entorno
+.env
+.env.local
+
+# Sistema
+.DS_Store
+Thumbs.db
