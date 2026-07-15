@@ -3,12 +3,17 @@ import { FaLinkedin, FaGithub, FaYoutube, FaDownload } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
 import useTheme from '../hooks/useTheme'
 import LanguageSelector from './LanguageSelector'
+import CV_FILES from '../config/cvConfig'
 
 
 export default function Header() {
 
     const [theme, setTheme] = useTheme()
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
+
+    const language = i18n.resolvedLanguage || "es";
+    const currentCV = CV_FILES[language] ?? CV_FILES.es;
+    const cvUrl = `${import.meta.env.BASE_URL}${currentCV.file}`;
 
     return (
         <header className="fixed w-full top-0 bg-white/80 dark:bg-darkbg/80 backdrop-blur-md z-50">
@@ -32,13 +37,12 @@ export default function Header() {
 
                     {/* Enlace de descarga HV */}
                     <a
-                        href={`${import.meta.env.BASE_URL}cv-edward.pdf`}
-                        download="CV_Edward_Silva.pdf"
+                        href={cvUrl}
+                        download={currentCV.name}
                         className="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg font-medium hover:bg-primary/90 transition-all shadow-sm hover:shadow-md dark:bg-primary dark:text-darkbg"
-                        title="Descargar CV"
+                        title={t("download_cv")}
                     >
                         <FaDownload className="text-sm" />
-
                     </a>
 
                     <button
