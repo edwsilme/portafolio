@@ -21,7 +21,7 @@ const projects = [
         description_en: 'Backend application for product catalog management. Practice project focused on technical assessments.',
         tags: ['.NET', 'C#', 'React', 'SQL'],
         image: imgProduct,
-        github: 'https://github.com/edwsilme/ProductCatalogBD',
+        github: 'https://github.com/edwsilme/CatalogProduct',
         demo: '#'
     },
     {
